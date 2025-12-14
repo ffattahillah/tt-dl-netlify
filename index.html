@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Downloader - Tanpa Watermark</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#ff0844">
+    <meta name="description" content="Unduh audio & video TikTok tanpa watermark">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="TikTok Downloader">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Styles & Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-tiktok"></i> TikTok Downloader</h1>
+            <p>Unduh audio & video TikTok tanpa watermark</p>
+        </div>
+
+        <div class="content">
+            <div class="input-group">
+                <label for="url-input"><i class="fas fa-link"></i> Masukkan URL Video TikTok:</label>
+                <div class="input-container">
+                    <input type="text" id="url-input" 
+                           placeholder="Contoh: https://www.tiktok.com/@username/video/123456789" 
+                           autocomplete="off">
+                    <button id="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+                <div class="url-preview" id="url-preview">
+                    <p><i class="fas fa-check-circle"></i> URL TikTok terdeteksi:</p>
+                    <p class="detected-url" id="detected-url"></p>
+                </div>
+            </div>
+
+            <div class="loader" id="loader">
+                <div class="spinner"></div>
+                <p style="margin-top: 10px;">Memproses video, harap tunggu...</p>
+            </div>
+
+            <div class="error" id="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="error-text"></span>
+            </div>
+
+            <div class="result" id="result">
+                <div class="video-preview">
+                    <video controls id="video-player">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="download-buttons">
+                    <a href="#" id="video-download" class="download-btn" download>
+                        <i class="fas fa-video"></i> Download Video
+                    </a>
+                    <a href="#" id="audio-download" class="download-btn" download>
+                        <i class="fas fa-music"></i> Download Audio
+                    </a>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> Cara Menggunakan:</h3>
+                <ul class="steps">
+                    <li>
+                        <i class="fas fa-copy"></i>
+                        <span>Salin link video TikTok dari aplikasi atau website</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-paste"></i>
+                        <span>Tempel teks di kolom input, sistem otomatis mendeteksi link</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-download"></i>
+                        <span>Klik tombol download dan tunggu proses selesai</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-save"></i>
+                        <span>Video akan tersedia untuk diunduh tanpa watermark</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 TikTok Downloader - with ♥️ by Andrea Rey</p>
+            <p class="pwa-status" id="pwa-status">Aplikasi tersedia untuk diinstal</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="app.js"></script>
+    <script src="pwa.js"></script>
+</body>
+</html>
