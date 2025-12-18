@@ -261,10 +261,7 @@ footer {
 }
 
 .pwa-status {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    color: #ff0844;
-    font-weight: 500;
+    display: none;
 }
 
 @media (max-width: 768px) {
